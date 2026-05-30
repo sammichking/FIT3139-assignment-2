@@ -28,8 +28,8 @@ c=0.05765
 d=0.000001
 e=0.0001
 u=0.13127809
-v=5
-n=100000
+v=0.13127809
+n=10000
 time=0.005
 
 print(x0,"\n",y0,"\n",a0,"\n",r,"\n",s,"\n",a,"\n",b,"\n",c,"\n",d,"\n",e,"\n",u,"\n",v,"\n",time)
@@ -66,7 +66,11 @@ def finda(t):
 
 
 
-
+###
+# 
+# THESE ONES ARE FOR IF YOU WANT TO CALCULATE DIFFERENCES INSTEAD OF THE VALUES THEMSELVES
+# 
+# ###
 def findDx(t):
     
     if dxmemo[t] != -1:
@@ -144,12 +148,12 @@ for i in range(0,n):
     dyvals.append(findDy(i))
     davals.append(findDa(i))
 
-#x_line=plt.plot(tvals,xvals)
+x_line=plt.plot(tvals,xvals)
 y_line=plt.plot(tvals,yvals)
-#a_line=plt.plot(tvals,avals)
+a_line=plt.plot(tvals,avals)
 plt.xlabel("t")
 plt.ylabel("Population")
-#plt.legend(["fish","sharks","algae"])
+plt.legend(["fish","sharks","algae"])
 plt.title("3")
 #plt.plot(tvals,dxvals)
 #plt.plot(tvals,dyvals)
